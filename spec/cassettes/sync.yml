@@ -1,0 +1,870 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api.harvestapp.com/invoices?status=draft&page=1&access_token=<ACCESS_TOKEN>
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      accept:
+      - application/json
+      content-type:
+      - application/json; charset=utf-8
+      user-agent:
+      - Harvestable/0.6.4
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      server:
+      - nginx
+      date:
+      - Wed, 29 Oct 2014 21:07:16 GMT
+      content-type:
+      - application/json; charset=utf-8
+      transfer-encoding:
+      - chunked
+      connection:
+      - close
+      status:
+      - 200 OK
+      x-frame-options:
+      - SAMEORIGIN
+      x-xss-protection:
+      - 1; mode=block
+      x-content-type-options:
+      - nosniff
+      x-ua-compatible:
+      - chrome=1
+      cache-control:
+      - private, no-store, no-cache, max-age=0, must-revalidate
+      access-control-allow-origin:
+      - http://localhost:5001/auth/harvest/callback
+      access-control-expose-headers:
+      - X-Served-From,X-Company-Version,X-Asked-With-Method
+      access-control-allow-headers:
+      - Content-Type,Accept
+      access-control-max-age:
+      - '1200'
+      x-served-from:
+      - https://api.harvestapp.com/invoices
+      set-cookie:
+      - _harvest_sess=VmRTRlpMMUlmdlYralJKLzBCeHJVdE1wTm5YN3htQnpBcU93RklPSFpFdVh3NURORzF0WE15K2lubUV0bXVySFdFVFduMGdTTEdzdkg4eTVDNkxjSHFsSlh6TzRSWmtuMUI1Nm1md01BZHYzMHVvdmp1b2Z1U2QxQmpWRWw2aFUtLTNFR3hobjduY0pFZGxmRnplZWloQ1E9PQ%3D%3D--b2e0789b1a55cce023e8448a1138d927919a16ba;
+        domain=.harvestapp.com; path=/; expires=Thu, 13 Nov 2014 21:07:16 -0000; secure;
+        HttpOnly
+      x-request-id:
+      - 6f43396d-cefd-4442-b35d-93dee3a6e526
+      x-runtime:
+      - '0.030935'
+      x-server:
+      - rails7
+      x-lb:
+      - lb2
+      strict-transport-security:
+      - max-age=31536000; includeSubDomains
+    body:
+      encoding: US-ASCII
+      string: ! '[{"invoices":{"id":2563573,"client_id":1446347,"period_start":null,"period_end":null,"number":"6","issued_at":"2013-03-22","due_at":"2013-03-22","amount":30.0,"currency":"United
+        States Dollars - USD","state":"draft","notes":"","purchase_order":"","due_amount":30.0,"due_at_human_format":"upon
+        receipt","created_at":"2013-03-22T21:09:34Z","updated_at":"2013-03-22T21:09:34Z","tax":null,"tax_amount":0.0,"subject":"Some
+        thing that was done for $$","recurring_invoice_id":null,"tax2":null,"tax2_amount":0.0,"client_key":"1dbcba8fbc6a350bfeb42f1a2212095370261974","estimate_id":null,"discount":null,"discount_amount":0.0,"retainer_id":null,"created_by_id":242275,"client_name":"Joe''s
+        Steam Cleaning 2"}},{"invoices":{"id":2315114,"client_id":1446347,"period_start":null,"period_end":null,"number":"5","issued_at":"2013-01-23","due_at":"2013-01-23","amount":10.0,"currency":"United
+        States Dollars - USD","state":"draft","notes":"","purchase_order":"","due_amount":10.0,"due_at_human_format":"upon
+        receipt","created_at":"2013-01-23T18:56:55Z","updated_at":"2013-01-23T18:56:55Z","tax":null,"tax_amount":0.0,"subject":"","recurring_invoice_id":null,"tax2":null,"tax2_amount":0.0,"client_key":"4ce2abc8b4ed442e1f97a582c13a928e256d42de","estimate_id":null,"discount":null,"discount_amount":0.0,"retainer_id":null,"created_by_id":242275,"client_name":"Joe''s
+        Steam Cleaning 2"}},{"invoices":{"id":2315110,"client_id":1446347,"period_start":null,"period_end":null,"number":"4","issued_at":"2013-01-23","due_at":"2013-01-23","amount":1110.0,"currency":"United
+        States Dollars - USD","state":"draft","notes":"","purchase_order":"","due_amount":1110.0,"due_at_human_format":"upon
+        receipt","created_at":"2013-01-23T18:55:54Z","updated_at":"2013-01-23T18:55:54Z","tax":null,"tax_amount":0.0,"subject":"","recurring_invoice_id":null,"tax2":null,"tax2_amount":0.0,"client_key":"565a3663d6eeca1e8913a599eaae33f2d3f30dda","estimate_id":null,"discount":null,"discount_amount":0.0,"retainer_id":null,"created_by_id":242275,"client_name":"Joe''s
+        Steam Cleaning 2"}},{"invoices":{"id":2311758,"client_id":1446348,"period_start":null,"period_end":null,"number":"3","issued_at":"2013-01-22","due_at":"2013-01-22","amount":100.0,"currency":"United
+        States Dollars - USD","state":"draft","notes":"","purchase_order":"","due_amount":100.0,"due_at_human_format":"upon
+        receipt","created_at":"2013-01-22T21:13:55Z","updated_at":"2013-01-22T21:13:55Z","tax":null,"tax_amount":0.0,"subject":"Test","recurring_invoice_id":null,"tax2":null,"tax2_amount":0.0,"client_key":"7feb3825690e6716608634dbb741b8b3f61d693d","estimate_id":null,"discount":null,"discount_amount":0.0,"retainer_id":null,"created_by_id":242275,"client_name":"Joe''s
+        Steam Cleaning 3"}},{"invoices":{"id":2311743,"client_id":1446349,"period_start":null,"period_end":null,"number":"2","issued_at":"2013-01-22","due_at":"2013-01-22","amount":56.0,"currency":"United
+        States Dollars - USD","state":"draft","notes":"","purchase_order":"","due_amount":56.0,"due_at_human_format":"upon
+        receipt","created_at":"2013-01-22T21:10:41Z","updated_at":"2013-01-22T21:10:41Z","tax":null,"tax_amount":0.0,"subject":"","recurring_invoice_id":null,"tax2":null,"tax2_amount":0.0,"client_key":"039bb6f74f48cd1178fa1d7660d66f653842513b","estimate_id":null,"discount":null,"discount_amount":0.0,"retainer_id":null,"created_by_id":242275,"client_name":"Tom''s
+        Butcher"}}]'
+    http_version: '1.1'
+  recorded_at: Wed, 29 Oct 2014 21:07:15 GMT
+- request:
+    method: get
+    uri: https://api.harvestapp.com/invoices/2563573?access_token=<ACCESS_TOKEN>
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      accept:
+      - application/json
+      content-type:
+      - application/json; charset=utf-8
+      user-agent:
+      - Harvestable/0.6.4
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      server:
+      - nginx
+      date:
+      - Wed, 29 Oct 2014 21:07:16 GMT
+      content-type:
+      - application/json; charset=utf-8
+      transfer-encoding:
+      - chunked
+      connection:
+      - close
+      status:
+      - 200 OK
+      x-frame-options:
+      - SAMEORIGIN
+      x-xss-protection:
+      - 1; mode=block
+      x-content-type-options:
+      - nosniff
+      x-ua-compatible:
+      - chrome=1
+      cache-control:
+      - private, no-store, no-cache, max-age=0, must-revalidate
+      access-control-allow-origin:
+      - http://localhost:5001/auth/harvest/callback
+      access-control-expose-headers:
+      - X-Served-From,X-Company-Version,X-Asked-With-Method
+      access-control-allow-headers:
+      - Content-Type,Accept
+      access-control-max-age:
+      - '1200'
+      x-served-from:
+      - https://api.harvestapp.com/invoices/2563573
+      set-cookie:
+      - _harvest_sess=VXZnekhlVVh0UG1URTFMTGZ2azJ3b2JoRHJiVnY5dXJxZVJTencySFN3a2swYjAxaHZIUTVrU0d5UnhzWGNRYm5XWVcvRU11NUkvSW9HRnFlTDFJTWRVTWhUL01WNnhEcC84QjF5TE5QcnFIdFN5YVNDcUxRVTBXdHZ2cENPWTctLTFRZE1JWlJyMkVzcW5NRlIrM055c1E9PQ%3D%3D--d2c406db89b8f2272721e04016d563dc6c0254f8;
+        domain=.harvestapp.com; path=/; expires=Thu, 13 Nov 2014 21:07:16 -0000; secure;
+        HttpOnly
+      x-request-id:
+      - f8f45254-cb12-41c9-88b4-0cb3ebe7b773
+      x-runtime:
+      - '0.053701'
+      x-server:
+      - rails14
+      x-lb:
+      - lb2
+      strict-transport-security:
+      - max-age=31536000; includeSubDomains
+    body:
+      encoding: US-ASCII
+      string: ! '{"invoice":{"id":2563573,"client_id":1446347,"period_start":null,"period_end":null,"number":"6","issued_at":"2013-03-22","due_at":"2013-03-22","amount":30.0,"currency":"United
+        States Dollars - USD","state":"draft","notes":"","purchase_order":"","due_amount":30.0,"due_at_human_format":"upon
+        receipt","created_at":"2013-03-22T21:09:34Z","updated_at":"2013-03-22T21:09:34Z","tax":null,"tax_amount":0.0,"subject":"Some
+        thing that was done for $$","recurring_invoice_id":null,"tax2":null,"tax2_amount":0.0,"client_key":"1dbcba8fbc6a350bfeb42f1a2212095370261974","estimate_id":null,"discount":null,"discount_amount":0.0,"retainer_id":null,"created_by_id":242275,"csv_line_items":"kind,description,quantity,unit_price,amount,taxed,taxed2,project_id\nService,\"Something
+        was done for you, and we like money.\",1.00,30.00,30.0,false,false,\n"}}'
+    http_version: '1.1'
+  recorded_at: Wed, 29 Oct 2014 21:07:15 GMT
+- request:
+    method: get
+    uri: https://api.harvestapp.com/invoices/2315114?access_token=<ACCESS_TOKEN>
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      accept:
+      - application/json
+      content-type:
+      - application/json; charset=utf-8
+      user-agent:
+      - Harvestable/0.6.4
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      server:
+      - nginx
+      date:
+      - Wed, 29 Oct 2014 21:07:16 GMT
+      content-type:
+      - application/json; charset=utf-8
+      transfer-encoding:
+      - chunked
+      connection:
+      - close
+      status:
+      - 200 OK
+      x-frame-options:
+      - SAMEORIGIN
+      x-xss-protection:
+      - 1; mode=block
+      x-content-type-options:
+      - nosniff
+      x-ua-compatible:
+      - chrome=1
+      cache-control:
+      - private, no-store, no-cache, max-age=0, must-revalidate
+      access-control-allow-origin:
+      - http://localhost:5001/auth/harvest/callback
+      access-control-expose-headers:
+      - X-Served-From,X-Company-Version,X-Asked-With-Method
+      access-control-allow-headers:
+      - Content-Type,Accept
+      access-control-max-age:
+      - '1200'
+      x-served-from:
+      - https://api.harvestapp.com/invoices/2315114
+      set-cookie:
+      - _harvest_sess=VzhGWVc3RG1TSUlIT1IvR0RPSnpWUk1weU92OVh2MzJMS2phdjlOc29XY2Vud3hzVG93U2pGdmZzdnhuWU1XSUhIOW5id1hUeVZNNFhrS21peFY5WXhzSCtjbmIxb2JZU2dWdkNEVTB1L0NwVUh5WWJFMElqS3prSjNqRjNTbEwtLWxGNVJvQ0grZFlacmpnSGJNV3NxY3c9PQ%3D%3D--9cef83c58733e0c5132a48bb37055b053b82e417;
+        domain=.harvestapp.com; path=/; expires=Thu, 13 Nov 2014 21:07:16 -0000; secure;
+        HttpOnly
+      x-request-id:
+      - a49d9914-ed6e-48a3-a11f-61232b6c9d53
+      x-runtime:
+      - '0.039575'
+      x-server:
+      - rails1
+      x-lb:
+      - lb2
+      strict-transport-security:
+      - max-age=31536000; includeSubDomains
+    body:
+      encoding: US-ASCII
+      string: ! '{"invoice":{"id":2315114,"client_id":1446347,"period_start":null,"period_end":null,"number":"5","issued_at":"2013-01-23","due_at":"2013-01-23","amount":10.0,"currency":"United
+        States Dollars - USD","state":"draft","notes":"","purchase_order":"","due_amount":10.0,"due_at_human_format":"upon
+        receipt","created_at":"2013-01-23T18:56:55Z","updated_at":"2013-01-23T18:56:55Z","tax":null,"tax_amount":0.0,"subject":"","recurring_invoice_id":null,"tax2":null,"tax2_amount":0.0,"client_key":"4ce2abc8b4ed442e1f97a582c13a928e256d42de","estimate_id":null,"discount":null,"discount_amount":0.0,"retainer_id":null,"created_by_id":242275,"csv_line_items":"kind,description,quantity,unit_price,amount,taxed,taxed2,project_id\nService,\"\",1.00,10.00,10.0,false,false,\n"}}'
+    http_version: '1.1'
+  recorded_at: Wed, 29 Oct 2014 21:07:15 GMT
+- request:
+    method: get
+    uri: https://api.harvestapp.com/invoices/2315110?access_token=<ACCESS_TOKEN>
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      accept:
+      - application/json
+      content-type:
+      - application/json; charset=utf-8
+      user-agent:
+      - Harvestable/0.6.4
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      server:
+      - nginx
+      date:
+      - Wed, 29 Oct 2014 21:07:16 GMT
+      content-type:
+      - application/json; charset=utf-8
+      transfer-encoding:
+      - chunked
+      connection:
+      - close
+      status:
+      - 200 OK
+      x-frame-options:
+      - SAMEORIGIN
+      x-xss-protection:
+      - 1; mode=block
+      x-content-type-options:
+      - nosniff
+      x-ua-compatible:
+      - chrome=1
+      cache-control:
+      - private, no-store, no-cache, max-age=0, must-revalidate
+      access-control-allow-origin:
+      - http://localhost:5001/auth/harvest/callback
+      access-control-expose-headers:
+      - X-Served-From,X-Company-Version,X-Asked-With-Method
+      access-control-allow-headers:
+      - Content-Type,Accept
+      access-control-max-age:
+      - '1200'
+      x-served-from:
+      - https://api.harvestapp.com/invoices/2315110
+      set-cookie:
+      - _harvest_sess=L3RlcWhmbzVHQW5CU2hrNUJxVk9NTjlneVdYVFRXRjhya2hZRlR4T2RxbVI0L21jY21DN0gwcWlKdEJMeFNzcVZNbzNQQlRzY0V5ZTVDNitwNXczVktld3h5WkRKUnFicUxta21WUm9VTXFhNG01d0txV1ZxWXE3eVIwOVAxYlotLWsyOExWUGRLODFEOVhiQ1lQQjZFYUE9PQ%3D%3D--d8199e12bed4b39c16e6037c87c4044dc4b9e6f8;
+        domain=.harvestapp.com; path=/; expires=Thu, 13 Nov 2014 21:07:16 -0000; secure;
+        HttpOnly
+      x-request-id:
+      - 92da59be-cfb5-48ae-8fd3-2af08decdccb
+      x-runtime:
+      - '0.027148'
+      x-server:
+      - rails3
+      x-lb:
+      - lb2
+      strict-transport-security:
+      - max-age=31536000; includeSubDomains
+    body:
+      encoding: US-ASCII
+      string: ! '{"invoice":{"id":2315110,"client_id":1446347,"period_start":null,"period_end":null,"number":"4","issued_at":"2013-01-23","due_at":"2013-01-23","amount":1110.0,"currency":"United
+        States Dollars - USD","state":"draft","notes":"","purchase_order":"","due_amount":1110.0,"due_at_human_format":"upon
+        receipt","created_at":"2013-01-23T18:55:54Z","updated_at":"2013-01-23T18:55:54Z","tax":null,"tax_amount":0.0,"subject":"","recurring_invoice_id":null,"tax2":null,"tax2_amount":0.0,"client_key":"565a3663d6eeca1e8913a599eaae33f2d3f30dda","estimate_id":null,"discount":null,"discount_amount":0.0,"retainer_id":null,"created_by_id":242275,"csv_line_items":"kind,description,quantity,unit_price,amount,taxed,taxed2,project_id\nService,\"\",1.00,1110.00,1110.0,false,false,\n"}}'
+    http_version: '1.1'
+  recorded_at: Wed, 29 Oct 2014 21:07:16 GMT
+- request:
+    method: get
+    uri: https://api.harvestapp.com/invoices/2311758?access_token=<ACCESS_TOKEN>
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      accept:
+      - application/json
+      content-type:
+      - application/json; charset=utf-8
+      user-agent:
+      - Harvestable/0.6.4
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      server:
+      - nginx
+      date:
+      - Wed, 29 Oct 2014 21:07:17 GMT
+      content-type:
+      - application/json; charset=utf-8
+      transfer-encoding:
+      - chunked
+      connection:
+      - close
+      status:
+      - 200 OK
+      x-frame-options:
+      - SAMEORIGIN
+      x-xss-protection:
+      - 1; mode=block
+      x-content-type-options:
+      - nosniff
+      x-ua-compatible:
+      - chrome=1
+      cache-control:
+      - private, no-store, no-cache, max-age=0, must-revalidate
+      access-control-allow-origin:
+      - http://localhost:5001/auth/harvest/callback
+      access-control-expose-headers:
+      - X-Served-From,X-Company-Version,X-Asked-With-Method
+      access-control-allow-headers:
+      - Content-Type,Accept
+      access-control-max-age:
+      - '1200'
+      x-served-from:
+      - https://api.harvestapp.com/invoices/2311758
+      set-cookie:
+      - _harvest_sess=WEROaEM3RVp4cmlDZXllbFJab05UcWVtSHRVbjl6cUFuUDBMWUZyK1ZYZHhrY0FsSG9DQk01R2Z1MlRjcDFFM0VYUjAvYVRBcWhibXpCOE9NcW5XdGs4UGJPNWFYMHdxdW12WkQ2VmVGU1ovNkVobWp1WUg3MXowRVREdnFvVXotLWNLbWhYUEY0U0x0c2M4SlFxeTdyb2c9PQ%3D%3D--795f947e4485a44c2b51bbe041638188158600a2;
+        domain=.harvestapp.com; path=/; expires=Thu, 13 Nov 2014 21:07:17 -0000; secure;
+        HttpOnly
+      x-request-id:
+      - 39e6ae18-7c3a-44fd-8316-0d32ee13213d
+      x-runtime:
+      - '0.085991'
+      x-server:
+      - rails5
+      x-lb:
+      - lb2
+      strict-transport-security:
+      - max-age=31536000; includeSubDomains
+    body:
+      encoding: US-ASCII
+      string: ! '{"invoice":{"id":2311758,"client_id":1446348,"period_start":null,"period_end":null,"number":"3","issued_at":"2013-01-22","due_at":"2013-01-22","amount":100.0,"currency":"United
+        States Dollars - USD","state":"draft","notes":"","purchase_order":"","due_amount":100.0,"due_at_human_format":"upon
+        receipt","created_at":"2013-01-22T21:13:55Z","updated_at":"2013-01-22T21:13:55Z","tax":null,"tax_amount":0.0,"subject":"Test","recurring_invoice_id":null,"tax2":null,"tax2_amount":0.0,"client_key":"7feb3825690e6716608634dbb741b8b3f61d693d","estimate_id":null,"discount":null,"discount_amount":0.0,"retainer_id":null,"created_by_id":242275,"csv_line_items":"kind,description,quantity,unit_price,amount,taxed,taxed2,project_id\nService,\"\",1.00,100.00,100.0,false,false,\n"}}'
+    http_version: '1.1'
+  recorded_at: Wed, 29 Oct 2014 21:07:16 GMT
+- request:
+    method: get
+    uri: https://api.harvestapp.com/invoices/2311743?access_token=<ACCESS_TOKEN>
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      accept:
+      - application/json
+      content-type:
+      - application/json; charset=utf-8
+      user-agent:
+      - Harvestable/0.6.4
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      server:
+      - nginx
+      date:
+      - Wed, 29 Oct 2014 21:07:17 GMT
+      content-type:
+      - application/json; charset=utf-8
+      transfer-encoding:
+      - chunked
+      connection:
+      - close
+      status:
+      - 200 OK
+      x-frame-options:
+      - SAMEORIGIN
+      x-xss-protection:
+      - 1; mode=block
+      x-content-type-options:
+      - nosniff
+      x-ua-compatible:
+      - chrome=1
+      cache-control:
+      - private, no-store, no-cache, max-age=0, must-revalidate
+      access-control-allow-origin:
+      - http://localhost:5001/auth/harvest/callback
+      access-control-expose-headers:
+      - X-Served-From,X-Company-Version,X-Asked-With-Method
+      access-control-allow-headers:
+      - Content-Type,Accept
+      access-control-max-age:
+      - '1200'
+      x-served-from:
+      - https://api.harvestapp.com/invoices/2311743
+      set-cookie:
+      - _harvest_sess=WWNjek5lV3A4TnJEY202ZTlLQlpHYXF0UWRMZVFCNG1YSVNyZ3lnSXo4a015b0hLYzBacTR4VFRCY1pSWitEMDI5ZjYzOTlMN3dES08rU3BZMzZGSE55bmJZWTN4M0tvSkRKakxUdit4dk1vdkdyYURKNkNrZEdSWGE4bnFWaVgtLUU4aFNJZUEwZ0hFaHNBUFc2Ymg3V2c9PQ%3D%3D--a233b8510da7671980b8e619ee86b61c067b5b6e;
+        domain=.harvestapp.com; path=/; expires=Thu, 13 Nov 2014 21:07:17 -0000; secure;
+        HttpOnly
+      x-request-id:
+      - b518c8e8-eef8-4a03-a4bd-35382e8b6cb6
+      x-runtime:
+      - '0.036579'
+      x-server:
+      - rails7
+      x-lb:
+      - lb2
+      strict-transport-security:
+      - max-age=31536000; includeSubDomains
+    body:
+      encoding: US-ASCII
+      string: ! '{"invoice":{"id":2311743,"client_id":1446349,"period_start":null,"period_end":null,"number":"2","issued_at":"2013-01-22","due_at":"2013-01-22","amount":56.0,"currency":"United
+        States Dollars - USD","state":"draft","notes":"","purchase_order":"","due_amount":56.0,"due_at_human_format":"upon
+        receipt","created_at":"2013-01-22T21:10:41Z","updated_at":"2013-01-22T21:10:41Z","tax":null,"tax_amount":0.0,"subject":"","recurring_invoice_id":null,"tax2":null,"tax2_amount":0.0,"client_key":"039bb6f74f48cd1178fa1d7660d66f653842513b","estimate_id":null,"discount":null,"discount_amount":0.0,"retainer_id":null,"created_by_id":242275,"csv_line_items":"kind,description,quantity,unit_price,amount,taxed,taxed2,project_id\nService,some
+        kind of service was performed.,1.00,56.00,56.0,false,false,\n"}}'
+    http_version: '1.1'
+  recorded_at: Wed, 29 Oct 2014 21:07:16 GMT
+- request:
+    method: get
+    uri: https://api.harvestapp.com/clients/1446347?access_token=<ACCESS_TOKEN>
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      accept:
+      - application/json
+      content-type:
+      - application/json; charset=utf-8
+      user-agent:
+      - Harvestable/0.6.4
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      server:
+      - nginx
+      date:
+      - Wed, 29 Oct 2014 21:07:17 GMT
+      content-type:
+      - application/json; charset=utf-8
+      transfer-encoding:
+      - chunked
+      connection:
+      - close
+      status:
+      - 200 OK
+      x-frame-options:
+      - SAMEORIGIN
+      x-xss-protection:
+      - 1; mode=block
+      x-content-type-options:
+      - nosniff
+      x-ua-compatible:
+      - chrome=1
+      cache-control:
+      - private, no-store, no-cache, max-age=0, must-revalidate
+      access-control-allow-origin:
+      - http://localhost:5001/auth/harvest/callback
+      access-control-expose-headers:
+      - X-Served-From,X-Company-Version,X-Asked-With-Method
+      access-control-allow-headers:
+      - Content-Type,Accept
+      access-control-max-age:
+      - '1200'
+      x-served-from:
+      - https://api.harvestapp.com/clients/1446347
+      set-cookie:
+      - _harvest_sess=YmFZcXVVcTd1dGhmMXdLdUI1UDd5bXlmdll6NUgxSUc4TU55U3gyR0pqYitwQUt2Ym9XRnQxQWp2M2YzV1lCOW5WK3JHTnVrWUVub1llcUJjZ2swUWNTc21idHdxWnZRS2xrdXpDZzZNRW91QU53UmFkRi9qK2xHUkJtalEyT3UtLUVaTXBYZ3pUY2k4bFNCSWhJeXA0cWc9PQ%3D%3D--111b74885addbf78904372eea978af6f7a22477d;
+        domain=.harvestapp.com; path=/; expires=Thu, 13 Nov 2014 21:07:17 -0000; secure;
+        HttpOnly
+      x-request-id:
+      - 269848a8-9c2e-4d1a-a1ae-9a738ebd59e5
+      x-runtime:
+      - '0.080995'
+      x-server:
+      - rails5
+      x-lb:
+      - lb2
+      strict-transport-security:
+      - max-age=31536000; includeSubDomains
+    body:
+      encoding: US-ASCII
+      string: ! '{"client":{"id":1446347,"name":"Joe''s Steam Cleaning 2","active":true,"currency":"United
+        States Dollars - USD","highrise_id":null,"cache_version":2097104244,"updated_at":"2013-01-14T20:13:33Z","created_at":"2013-01-14T20:13:32Z","currency_symbol":"$","details":"Steam
+        Cleaning across the country","default_invoice_timeframe":null,"last_invoice_kind":"free_form"}}'
+    http_version: '1.1'
+  recorded_at: Wed, 29 Oct 2014 21:07:17 GMT
+- request:
+    method: get
+    uri: https://api.harvestapp.com/clients/1446347?access_token=<ACCESS_TOKEN>
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      accept:
+      - application/json
+      content-type:
+      - application/json; charset=utf-8
+      user-agent:
+      - Harvestable/0.6.4
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      server:
+      - nginx
+      date:
+      - Wed, 29 Oct 2014 21:07:18 GMT
+      content-type:
+      - application/json; charset=utf-8
+      transfer-encoding:
+      - chunked
+      connection:
+      - close
+      status:
+      - 200 OK
+      x-frame-options:
+      - SAMEORIGIN
+      x-xss-protection:
+      - 1; mode=block
+      x-content-type-options:
+      - nosniff
+      x-ua-compatible:
+      - chrome=1
+      cache-control:
+      - private, no-store, no-cache, max-age=0, must-revalidate
+      access-control-allow-origin:
+      - http://localhost:5001/auth/harvest/callback
+      access-control-expose-headers:
+      - X-Served-From,X-Company-Version,X-Asked-With-Method
+      access-control-allow-headers:
+      - Content-Type,Accept
+      access-control-max-age:
+      - '1200'
+      x-served-from:
+      - https://api.harvestapp.com/clients/1446347
+      set-cookie:
+      - _harvest_sess=TFBNRUl3TncxWDlMby8rcFdPdTRqY1h1RStxclp4K3JJZGZSQWZrZG4vYzRnNHJRSHl5QmhSYnZCaWtieWJEeDRPYnl4OFZXZTBvUkxSR1czc1MvRTBpSzVzZThoOGE4WTNXK09YeUdlbGwvbWZEdWRlNXFmWGtFNkw1akpGMlktLWwvWnJKMURBVEM3KzZSTkl5aUROT3c9PQ%3D%3D--98a820bc5b6b98a3c0f43e628525c331525300eb;
+        domain=.harvestapp.com; path=/; expires=Thu, 13 Nov 2014 21:07:18 -0000; secure;
+        HttpOnly
+      x-request-id:
+      - d0efd2ea-e67e-4380-a092-3228e51de4be
+      x-runtime:
+      - '0.041866'
+      x-server:
+      - rails10
+      x-lb:
+      - lb2
+      strict-transport-security:
+      - max-age=31536000; includeSubDomains
+    body:
+      encoding: US-ASCII
+      string: ! '{"client":{"id":1446347,"name":"Joe''s Steam Cleaning 2","active":true,"currency":"United
+        States Dollars - USD","highrise_id":null,"cache_version":2097104244,"updated_at":"2013-01-14T20:13:33Z","created_at":"2013-01-14T20:13:32Z","currency_symbol":"$","details":"Steam
+        Cleaning across the country","default_invoice_timeframe":null,"last_invoice_kind":"free_form"}}'
+    http_version: '1.1'
+  recorded_at: Wed, 29 Oct 2014 21:07:17 GMT
+- request:
+    method: get
+    uri: https://api.harvestapp.com/clients/1446347?access_token=<ACCESS_TOKEN>
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      accept:
+      - application/json
+      content-type:
+      - application/json; charset=utf-8
+      user-agent:
+      - Harvestable/0.6.4
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      server:
+      - nginx
+      date:
+      - Wed, 29 Oct 2014 21:07:18 GMT
+      content-type:
+      - application/json; charset=utf-8
+      transfer-encoding:
+      - chunked
+      connection:
+      - close
+      status:
+      - 200 OK
+      x-frame-options:
+      - SAMEORIGIN
+      x-xss-protection:
+      - 1; mode=block
+      x-content-type-options:
+      - nosniff
+      x-ua-compatible:
+      - chrome=1
+      cache-control:
+      - private, no-store, no-cache, max-age=0, must-revalidate
+      access-control-allow-origin:
+      - http://localhost:5001/auth/harvest/callback
+      access-control-expose-headers:
+      - X-Served-From,X-Company-Version,X-Asked-With-Method
+      access-control-allow-headers:
+      - Content-Type,Accept
+      access-control-max-age:
+      - '1200'
+      x-served-from:
+      - https://api.harvestapp.com/clients/1446347
+      set-cookie:
+      - _harvest_sess=UTNVQ2FocTRTa0hBSXJSbUhEQ3V0YXVJZWxBQ2ZUYnI3eTVSUlkza2M2RFU3ZE95am5nMXNGeHJuNGYwUmV3V0ZnbSthb2J4NWp1dzYvZGpyM3RPT2E2b3FQeWRvN2dmN2NJemVOSUg3Q0Mzd1I4SlYwU3JPamRVSDZQNnUzZU0tLUtqeUliSUk4ajBKMU1zYUFsamZDWGc9PQ%3D%3D--476316c24ac4cec67f14c4b043339b9fd6514e2d;
+        domain=.harvestapp.com; path=/; expires=Thu, 13 Nov 2014 21:07:18 -0000; secure;
+        HttpOnly
+      x-request-id:
+      - e15e05e4-1a08-4ba6-987c-83fb53846e49
+      x-runtime:
+      - '0.043461'
+      x-server:
+      - rails10
+      x-lb:
+      - lb2
+      strict-transport-security:
+      - max-age=31536000; includeSubDomains
+    body:
+      encoding: US-ASCII
+      string: ! '{"client":{"id":1446347,"name":"Joe''s Steam Cleaning 2","active":true,"currency":"United
+        States Dollars - USD","highrise_id":null,"cache_version":2097104244,"updated_at":"2013-01-14T20:13:33Z","created_at":"2013-01-14T20:13:32Z","currency_symbol":"$","details":"Steam
+        Cleaning across the country","default_invoice_timeframe":null,"last_invoice_kind":"free_form"}}'
+    http_version: '1.1'
+  recorded_at: Wed, 29 Oct 2014 21:07:17 GMT
+- request:
+    method: get
+    uri: https://api.harvestapp.com/clients/1446348?access_token=<ACCESS_TOKEN>
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      accept:
+      - application/json
+      content-type:
+      - application/json; charset=utf-8
+      user-agent:
+      - Harvestable/0.6.4
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      server:
+      - nginx
+      date:
+      - Wed, 29 Oct 2014 21:07:18 GMT
+      content-type:
+      - application/json; charset=utf-8
+      transfer-encoding:
+      - chunked
+      connection:
+      - close
+      status:
+      - 200 OK
+      x-frame-options:
+      - SAMEORIGIN
+      x-xss-protection:
+      - 1; mode=block
+      x-content-type-options:
+      - nosniff
+      x-ua-compatible:
+      - chrome=1
+      cache-control:
+      - private, no-store, no-cache, max-age=0, must-revalidate
+      access-control-allow-origin:
+      - http://localhost:5001/auth/harvest/callback
+      access-control-expose-headers:
+      - X-Served-From,X-Company-Version,X-Asked-With-Method
+      access-control-allow-headers:
+      - Content-Type,Accept
+      access-control-max-age:
+      - '1200'
+      x-served-from:
+      - https://api.harvestapp.com/clients/1446348
+      set-cookie:
+      - _harvest_sess=VlY2T0ZXNklLWEJYaTFNVUFQTUwvT1o3cGxjLzVmcnhDdjZTbjBCa3VocWFEbGFWTjVlcWFsaW1WZGNxY3BtamlTdnEyYjA3Y1RwVXZyWmljT21yZm1WRElNY3g1RFMwWkFpVGV2ZE8vV3djaHNmQjBLM1U5dGl6dzlWcTFYR2UtLUpSSE5TdjBBL3ppajQwbXFHV2JObFE9PQ%3D%3D--934eaf3f6771d62584746c8e23e31f61626657ec;
+        domain=.harvestapp.com; path=/; expires=Thu, 13 Nov 2014 21:07:18 -0000; secure;
+        HttpOnly
+      x-request-id:
+      - 4729722f-8e89-40df-9c29-d2dbea9def5b
+      x-runtime:
+      - '0.032209'
+      x-server:
+      - rails2
+      x-lb:
+      - lb2
+      strict-transport-security:
+      - max-age=31536000; includeSubDomains
+    body:
+      encoding: US-ASCII
+      string: ! '{"client":{"id":1446348,"name":"Joe''s Steam Cleaning 3","active":true,"currency":"United
+        States Dollars - USD","highrise_id":null,"cache_version":4059838059,"updated_at":"2013-01-14T20:13:33Z","created_at":"2013-01-14T20:13:33Z","currency_symbol":"$","details":"Steam
+        Cleaning across the country","default_invoice_timeframe":null,"last_invoice_kind":"free_form"}}'
+    http_version: '1.1'
+  recorded_at: Wed, 29 Oct 2014 21:07:17 GMT
+- request:
+    method: get
+    uri: https://api.harvestapp.com/clients/1446349?access_token=<ACCESS_TOKEN>
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      accept:
+      - application/json
+      content-type:
+      - application/json; charset=utf-8
+      user-agent:
+      - Harvestable/0.6.4
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      server:
+      - nginx
+      date:
+      - Wed, 29 Oct 2014 21:07:18 GMT
+      content-type:
+      - application/json; charset=utf-8
+      transfer-encoding:
+      - chunked
+      connection:
+      - close
+      status:
+      - 200 OK
+      x-frame-options:
+      - SAMEORIGIN
+      x-xss-protection:
+      - 1; mode=block
+      x-content-type-options:
+      - nosniff
+      x-ua-compatible:
+      - chrome=1
+      cache-control:
+      - private, no-store, no-cache, max-age=0, must-revalidate
+      access-control-allow-origin:
+      - http://localhost:5001/auth/harvest/callback
+      access-control-expose-headers:
+      - X-Served-From,X-Company-Version,X-Asked-With-Method
+      access-control-allow-headers:
+      - Content-Type,Accept
+      access-control-max-age:
+      - '1200'
+      x-served-from:
+      - https://api.harvestapp.com/clients/1446349
+      set-cookie:
+      - _harvest_sess=OGp3cFdOT1duT1BiSWU3NHFYRWhIOUk4WHc5M1VIMDJaSXVNam9ySFgrRTE3L3JPb1YzdEdUdUwwU3IrU2VCZjBUcTQ5NVhDRVEvWXlwYjFoYyt5Z2VLTS91MXVXK2podkFqc3JuWC9WcElJeHplUGhiQ3d1SWwwM1VTdWNnVlktLVdRalFDaTVsT0tQbXdvdlN0OXo1SWc9PQ%3D%3D--caeb5cddc4984983c74556ba7ab3b51a6ba3c028;
+        domain=.harvestapp.com; path=/; expires=Thu, 13 Nov 2014 21:07:18 -0000; secure;
+        HttpOnly
+      x-request-id:
+      - d9c0f15f-df23-4992-a92e-99976456e5de
+      x-runtime:
+      - '0.043827'
+      x-server:
+      - rails6
+      x-lb:
+      - lb2
+      strict-transport-security:
+      - max-age=31536000; includeSubDomains
+    body:
+      encoding: US-ASCII
+      string: ! '{"client":{"id":1446349,"name":"Tom''s Butcher","active":true,"currency":"United
+        States Dollars - USD","highrise_id":null,"cache_version":3586839684,"updated_at":"2013-01-14T20:13:35Z","created_at":"2013-01-14T20:13:35Z","currency_symbol":"$","details":"Building
+        API Widgets across the country","default_invoice_timeframe":null,"last_invoice_kind":"free_form"}}'
+    http_version: '1.1'
+  recorded_at: Wed, 29 Oct 2014 21:07:18 GMT
+- request:
+    method: get
+    uri: https://api.harvestapp.com/account/who_am_i?access_token=<ACCESS_TOKEN>
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      accept:
+      - application/json
+      content-type:
+      - application/json; charset=utf-8
+      user-agent:
+      - Harvestable/0.6.4
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      server:
+      - nginx
+      date:
+      - Wed, 29 Oct 2014 21:07:19 GMT
+      content-type:
+      - application/json; charset=utf-8
+      transfer-encoding:
+      - chunked
+      connection:
+      - close
+      status:
+      - 200 OK
+      x-xss-protection:
+      - 1; mode=block
+      x-content-type-options:
+      - nosniff
+      x-ua-compatible:
+      - chrome=1
+      cache-control:
+      - private, no-store, no-cache, max-age=0, must-revalidate
+      access-control-allow-origin:
+      - http://localhost:5001/auth/harvest/callback
+      access-control-expose-headers:
+      - X-Served-From,X-Company-Version,X-Asked-With-Method
+      access-control-allow-headers:
+      - Content-Type,Accept
+      access-control-max-age:
+      - '1200'
+      x-served-from:
+      - https://api.harvestapp.com/account/who_am_i
+      set-cookie:
+      - _harvest_sess=UXFucnIybjZqMlh4TTc0VWpVZzlRd3NmMzAvV0Z4b3MwejloVDBRQkZaMS8yNm9VTWlEa0N6OWw0UzFwUVhpZVJSMWdwTXJrSDU4OXNLc1JXOHFlVXJEN2UvKzRVMTR5QksvVHRFT1MvdW40eUV3cmxkTDNVL0lJZStsNkNIV0YtLVkzQ0xNeGJvdkFEOWMrdGNFRXdMN3c9PQ%3D%3D--85ad4c53c8d8b9331256e45bae4a9922c8f4ca2c;
+        domain=.harvestapp.com; path=/; expires=Thu, 13 Nov 2014 21:07:19 -0000; secure;
+        HttpOnly
+      x-request-id:
+      - 90491224-2357-4748-b89a-f6693492109c
+      x-runtime:
+      - '0.050535'
+      x-server:
+      - rails4
+      x-lb:
+      - lb2
+      strict-transport-security:
+      - max-age=31536000; includeSubDomains
+    body:
+      encoding: US-ASCII
+      string: ! '{"company":{"base_uri":"https://bcobbtest.harvestapp.com","full_domain":"bcobbtest.harvestapp.com","name":"Brian''s
+        Test Venture","active":true,"week_start_day":"Monday","time_format":"decimal","clock":"12h","decimal_symbol":".","color_scheme":"orange","modules":{"expenses":true,"invoices":true,"estimates":true,"approval":false},"thousands_separator":",","plan_type":"free"},"user":{"timezone":"Central
+        Time (US & Canada)","timezone_identifier":"America/Chicago","timezone_utc_offset":-18000,"id":242275,"email":"b@bcobb.net","admin":true,"first_name":"Brian","last_name":"Cobb","avatar_url":"/assets/default_user_avatar.png?1414615311","project_manager":{"is_project_manager":true,"can_see_rates":true,"can_create_projects":true,"can_create_invoices":true},"timestamp_timers":false}}'
+    http_version: '1.1'
+  recorded_at: Wed, 29 Oct 2014 21:07:18 GMT
+recorded_with: VCR 2.4.0

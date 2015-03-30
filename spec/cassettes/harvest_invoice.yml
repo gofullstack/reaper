@@ -1,0 +1,92 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api.harvestapp.com/invoices?access_token=<ACCESS_TOKEN>
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      accept:
+      - application/json
+      content-type:
+      - application/json; charset=utf-8
+      user-agent:
+      - Harvestable/0.6.4
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      server:
+      - nginx
+      date:
+      - Wed, 29 Oct 2014 21:07:19 GMT
+      content-type:
+      - application/json; charset=utf-8
+      transfer-encoding:
+      - chunked
+      connection:
+      - close
+      status:
+      - 200 OK
+      x-frame-options:
+      - SAMEORIGIN
+      x-xss-protection:
+      - 1; mode=block
+      x-content-type-options:
+      - nosniff
+      x-ua-compatible:
+      - chrome=1
+      cache-control:
+      - private, no-store, no-cache, max-age=0, must-revalidate
+      access-control-allow-origin:
+      - http://localhost:5001/auth/harvest/callback
+      access-control-expose-headers:
+      - X-Served-From,X-Company-Version,X-Asked-With-Method
+      access-control-allow-headers:
+      - Content-Type,Accept
+      access-control-max-age:
+      - '1200'
+      x-served-from:
+      - https://api.harvestapp.com/invoices
+      set-cookie:
+      - _harvest_sess=eUI2eUVNWTd3K0Q4YUJMWHd6Y3NTREdsNjhRYlVtNXh1VWEwTXBOWk94Ukt2WnlhQys2d0VlMnBvdjgxZnB1ekQxeEJRd3MyaGcvVHhSdnJnbHdaV1hRZGF4NzZ0ZnFEZGN5cTN4cjE4OVU4bGtOV1RTSnJmMUt6N0NpNGdzdkQtLUZmU3o1WWIxY254a2llWVBBYnBSWmc9PQ%3D%3D--efe522ba40fa005ece433c64093141465e713f51;
+        domain=.harvestapp.com; path=/; expires=Thu, 13 Nov 2014 21:07:19 -0000; secure;
+        HttpOnly
+      x-request-id:
+      - f9336b4f-9891-43c9-acfb-43bb9ef5479a
+      x-runtime:
+      - '0.075891'
+      x-server:
+      - rails8
+      x-lb:
+      - lb2
+      strict-transport-security:
+      - max-age=31536000; includeSubDomains
+    body:
+      encoding: US-ASCII
+      string: ! '[{"invoices":{"id":2563573,"client_id":1446347,"period_start":null,"period_end":null,"number":"6","issued_at":"2013-03-22","due_at":"2013-03-22","amount":30.0,"currency":"United
+        States Dollars - USD","state":"draft","notes":"","purchase_order":"","due_amount":30.0,"due_at_human_format":"upon
+        receipt","created_at":"2013-03-22T21:09:34Z","updated_at":"2013-03-22T21:09:34Z","tax":null,"tax_amount":0.0,"subject":"Some
+        thing that was done for $$","recurring_invoice_id":null,"tax2":null,"tax2_amount":0.0,"client_key":"1dbcba8fbc6a350bfeb42f1a2212095370261974","estimate_id":null,"discount":null,"discount_amount":0.0,"retainer_id":null,"created_by_id":242275,"client_name":"Joe''s
+        Steam Cleaning 2"}},{"invoices":{"id":2315114,"client_id":1446347,"period_start":null,"period_end":null,"number":"5","issued_at":"2013-01-23","due_at":"2013-01-23","amount":10.0,"currency":"United
+        States Dollars - USD","state":"draft","notes":"","purchase_order":"","due_amount":10.0,"due_at_human_format":"upon
+        receipt","created_at":"2013-01-23T18:56:55Z","updated_at":"2013-01-23T18:56:55Z","tax":null,"tax_amount":0.0,"subject":"","recurring_invoice_id":null,"tax2":null,"tax2_amount":0.0,"client_key":"4ce2abc8b4ed442e1f97a582c13a928e256d42de","estimate_id":null,"discount":null,"discount_amount":0.0,"retainer_id":null,"created_by_id":242275,"client_name":"Joe''s
+        Steam Cleaning 2"}},{"invoices":{"id":2315110,"client_id":1446347,"period_start":null,"period_end":null,"number":"4","issued_at":"2013-01-23","due_at":"2013-01-23","amount":1110.0,"currency":"United
+        States Dollars - USD","state":"draft","notes":"","purchase_order":"","due_amount":1110.0,"due_at_human_format":"upon
+        receipt","created_at":"2013-01-23T18:55:54Z","updated_at":"2013-01-23T18:55:54Z","tax":null,"tax_amount":0.0,"subject":"","recurring_invoice_id":null,"tax2":null,"tax2_amount":0.0,"client_key":"565a3663d6eeca1e8913a599eaae33f2d3f30dda","estimate_id":null,"discount":null,"discount_amount":0.0,"retainer_id":null,"created_by_id":242275,"client_name":"Joe''s
+        Steam Cleaning 2"}},{"invoices":{"id":2311758,"client_id":1446348,"period_start":null,"period_end":null,"number":"3","issued_at":"2013-01-22","due_at":"2013-01-22","amount":100.0,"currency":"United
+        States Dollars - USD","state":"draft","notes":"","purchase_order":"","due_amount":100.0,"due_at_human_format":"upon
+        receipt","created_at":"2013-01-22T21:13:55Z","updated_at":"2013-01-22T21:13:55Z","tax":null,"tax_amount":0.0,"subject":"Test","recurring_invoice_id":null,"tax2":null,"tax2_amount":0.0,"client_key":"7feb3825690e6716608634dbb741b8b3f61d693d","estimate_id":null,"discount":null,"discount_amount":0.0,"retainer_id":null,"created_by_id":242275,"client_name":"Joe''s
+        Steam Cleaning 3"}},{"invoices":{"id":2311743,"client_id":1446349,"period_start":null,"period_end":null,"number":"2","issued_at":"2013-01-22","due_at":"2013-01-22","amount":56.0,"currency":"United
+        States Dollars - USD","state":"draft","notes":"","purchase_order":"","due_amount":56.0,"due_at_human_format":"upon
+        receipt","created_at":"2013-01-22T21:10:41Z","updated_at":"2013-01-22T21:10:41Z","tax":null,"tax_amount":0.0,"subject":"","recurring_invoice_id":null,"tax2":null,"tax2_amount":0.0,"client_key":"039bb6f74f48cd1178fa1d7660d66f653842513b","estimate_id":null,"discount":null,"discount_amount":0.0,"retainer_id":null,"created_by_id":242275,"client_name":"Tom''s
+        Butcher"}},{"invoices":{"id":2284756,"client_id":1446350,"period_start":"2011-02-26","period_end":"2011-03-31","number":"1","issued_at":"2011-03-31","due_at":"2011-03-31","amount":2400.0,"currency":"United
+        States Dollars - USD","state":"paid","notes":"Some notes go here","purchase_order":null,"due_amount":0.0,"due_at_human_format":"upon
+        receipt","created_at":"2013-01-14T20:14:00Z","updated_at":"2014-04-30T01:52:35Z","tax":null,"tax_amount":0.0,"subject":"Invoice
+        for Joe''s Stream Cleaning","recurring_invoice_id":null,"tax2":null,"tax2_amount":0.0,"client_key":"62694a8fb7b9ab79241cb5351d22bcece97865f3","estimate_id":null,"discount":null,"discount_amount":0.0,"retainer_id":null,"created_by_id":242275,"client_name":"Joe''s
+        Steam Cleaning 4"}}]'
+    http_version: '1.1'
+  recorded_at: Wed, 29 Oct 2014 21:07:18 GMT
+recorded_with: VCR 2.4.0

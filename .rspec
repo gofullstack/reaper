@@ -1,0 +1,4 @@
+-r turnip/rspec
+--color
+--format Fuubar
+--require spec_helper

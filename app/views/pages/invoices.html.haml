@@ -1,0 +1,43 @@
+%form.form-stacked{:action => "/export", :method => "post"}
+  %table.table{:cellpadding => "0", :cellspacing => "0"}
+    %thead
+      %tr
+        %th
+          %label{:for => "select_all"}
+            %input#select_all{:name => "select_all", :type => "checkbox", :value => "1"}
+          All
+        %th Invoice #
+        %th Client
+        %th.rightalign Amount Due
+        %th.rightalign Issued Date
+        %th.rightalign Due Date
+    %tbody
+      - @invoices.each do |invoice|
+        %tr
+          %td
+            %input{:name => "export[#{invoice.id}]", :type => "hidden", :value => "0"}
+              %input.exportable{:id => "export-#{invoice.id}", :name => "export[#{invoice.id}]", :type => "checkbox", :value => "1"}
+          %td
+            = invoice.number
+          %td.client
+            %a{:href => "http://#{@subdomain}.harvestapp.com/invoices/#{invoice.harvest_id}", :target => "_blank"}
+              = invoice.client.name
+            %p= invoice.subject
+          %td.rightalign.amountdue
+            = "$%.2f" % invoice.due_amount
+          - format = '%b %d, %Y'
+          %td.rightalign
+            = invoice.issued_at.to_time.strftime(format)
+          %td.rightalign
+            = invoice.due_at.to_time.strftime(format)
+  .actions
+    .radiocheckbox
+      %p Export for:
+      = radio_button('export', 'format', '2012', {checked: true})
+      %label{:for => 'export_format_2012' }
+        Quickbooks 2012 and Lower
+      = radio_button('export', 'format', '2013')
+      %label{:for => 'export_format_2013' }
+        Quickbooks 2013
+    %button.btn.primary{:name => "commit", :type => "submit", :value => "1", :onclick => "_gaq.push(['_trackEvent', 'Usage', 'Export',]);"}
+      Export to IIF

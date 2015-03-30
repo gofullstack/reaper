@@ -1,0 +1,7 @@
+= form_tag '/login', :method => 'post' do
+  %input#subdomain{:name => "email", :type => "email", :value => "", :placeholder => "Enter Email Address"}
+  %button.go{:name => "commit", :type => "submit", :value => "1", :onclick => "_gaq.push(['_trackEvent', 'Usage', 'Login',]);" }
+    Go
+
+%p.intro
+  Log in with your Harvest email address to grab the 50 latest outstanding Harvest invoices in the IIF format for seamless import into Quickbooks.

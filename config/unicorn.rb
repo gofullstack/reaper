@@ -1,0 +1,28 @@
+$stdout.sync = true # do not buffer STDOUT
+
+worker_processes Integer(ENV["WEB_CONCURRENCY"] || 3) # amount of unicorn workers to spin up
+timeout 30         # restarts workers that hang for 30 seconds
+preload_app true   # needed for newrelic to load
+
+# Avoid database connection errors
+# via http://stackoverflow.com/a/12673336/161787
+before_fork do |server, worker|
+
+  Signal.trap 'TERM' do
+    puts 'Unicorn master intercepting TERM and sending myself QUIT instead'
+    Process.kill 'QUIT', Process.pid
+  end
+
+  defined?(ActiveRecord::Base) and
+    ActiveRecord::Base.connection.disconnect!
+end
+
+after_fork do |server, worker|
+
+  Signal.trap 'TERM' do
+    puts 'Unicorn worker intercepting TERM and doing nothing. Wait for master to sent QUIT'
+  end
+
+  defined?(ActiveRecord::Base) and
+    ActiveRecord::Base.establish_connection
+end

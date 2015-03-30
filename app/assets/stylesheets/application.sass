@@ -1,0 +1,382 @@
+@import "base"
+@import "formalize"
+
+html
+  height: 100%
+  min-height: 100%
+
+body
+  background: #f5f5f5 url(/images/pw_maze_white.png)
+  color: #454545
+  font:
+    family: "pragmatica-web", helvetica, arial, sans-serif
+    size: 100%
+  line-height: 1.5em
+  height: 100%
+  min-height: 100%
+  text-rendering: optimizeLegibility
+  -webkit-font-smoothing: antialiased
+
+.wrap
+  background-color: #fff
+  border-left: 0.1875em solid #f36c00
+  +box-shadow(1.0625em 0 0 -0.125em #555 inset)
+  +box-sizing(border-box)
+  min-height: 100%
+  padding: 6.25em 6.25em 6.25em 7.5em
+  max-width: 73em
+
+a:link, a:visited
+  color: #888
+  text-decoration: underline
+
+a:hover, a:active
+  color: #111
+  text-decoration: none
+
+p
+  margin-bottom: 1.5em
+
+strong
+  font-weight: 700
+
+ul, ol
+  margin: 1em 0
+  padding-left: 2.5em
+
+ul li
+  list-style-type: disc
+
+ol li
+  list-style-type: decimal
+
+.logo
+  color: #f36c00
+  font:
+    size: 8.75em // 140px / 16
+    weight: 700
+  line-height: .78em
+  margin: 0 0 0 -.06em
+  text-transform: uppercase
+
+  em
+    color: #555
+    font:
+      size: .6em
+      style: normal
+    text-transform: none
+
+  a:link, a:visited
+    background-color: transparent
+    border: none
+    color: #f36c00
+    padding: 0
+    text-decoration: none
+
+    &:hover
+      background-color: transparent
+
+// Logo Kerning 
+.logoword1
+  .char1
+    margin-left: 0.002em
+
+  .char2
+    margin-left: -0.04em
+
+  .char3
+    margin-left: 0.05em
+
+  .char4
+    margin-left: 0.007em
+
+  .char5
+    margin-left: -0.036em
+
+  .char6
+    margin-left: -0.023em
+
+.logoword2
+  .char1
+    margin-left: -0.0346em
+
+  .char2
+    margin-left: -0.032em
+
+  .char3
+    margin-left: 0.02em
+
+h2
+  color: #ccc
+  font:
+    size: 2.28em // 34px / 16
+    weight: 600
+  line-height: 1em
+  margin: 0 0 .5em 0
+
+  &.subtitle
+    letter-spacing: -.05em
+    margin: -.4em 0 2.75em 0
+    max-width: 18em
+
+    em
+      color: #b8b8b8
+      font-style: normal
+
+h3
+  color: #555
+  font:
+    size: 3.75em
+    weight: 200
+  line-height: 1em
+  margin: 0 0 .5em 0
+  padding-top: .2em
+
+  &.invoicetitle
+    margin-left: -.08em
+
+h4
+  color: #ccc
+  font:
+    size: 2em
+    weight: 600
+  letter-spacing: -.05em
+  line-height: 1em
+  margin: 1.2em 0 .5em 0
+
+  &.currentuser
+    margin: 0 0 1.5em 0
+
+    small
+      color: #bbb
+      +inline-block
+      font-size: .5em
+      margin-left: 1em
+
+.created_by_cramerdev
+  +inline-block
+  height: 2.8125em
+  margin: 12.5em 3.125em 0 0
+  width: 15.3125em
+
+  a
+    background: url(/images/logo_cramerdev.svg) no-repeat
+    +background-size(contain)
+    display: block
+    height: 2.8125em
+    text-decoration: none
+    width: 15.3125em
+
+    span
+      display: none
+
+.tos_privacy
+  +inline-block
+  margin-top: 12.5em
+
+  a
+    +inline-block
+    font-size: 0.5em
+    margin-right: 1.5625em
+form
+  position: relative
+  z-index: 1
+
+input#subdomain
+  border: 0
+  border-left: 2px solid #ddd
+  color: #555
+  font:
+    family: "pragmatica-web", helvetica, arial, sans-serif
+    size: 3.75em
+    weight: 200
+  height: auto
+  margin: 0 0 .5em 0
+  width: 9.9em
+  padding-left: 10px
+
+button.go
+  background-image: none
+  background-color: #fff
+  border: 0
+  color: #ccc
+  font:
+    family: "pragmatica-web", helvetica, arial, sans-serif
+    size: 3.75em
+    weight: 400
+  height: auto
+  margin-top: 0.03em
+
+  &:hover
+    color: #555
+
+.block_decoration
+  background: #f5f5f5 url(/images/pw_maze_white.png)
+  height: 5.1875em
+  left: 1.125em
+  line-height: 1px
+  position: absolute
+  top: 24.125em
+  width: 2.5em
+  z-index: 1
+
+.intro
+  color: #aaa
+  font:
+    size: 1.125em
+    weight: 400
+  max-width: 35em
+
+.logout
+  font-size: .5em
+  margin: .1em 0 0 1em
+
+table
+  margin-bottom: 1.25em
+  width: 100%
+
+th
+  border-bottom: 0.125em solid #ddd
+  color: #ccc
+  font:
+    weight: 600
+  padding: 0.9375em
+  text-align: left
+  vertical-align: top
+  white-space: nowrap
+
+  &.rightalign
+    text-align: right
+
+td
+  background-color: #fff
+  border-bottom: 0.0625em solid #f5f5f5
+  color: #555
+  line-height: 1.7em
+  padding: 0.9375em
+  vertical-align: top
+  white-space: nowrap
+
+  &.client
+    white-space: normal
+    width: 100%
+
+  &.rightalign
+    text-align: right
+
+  &.amountdue
+    font-weight: 600
+
+  p
+    font-size: .9em
+
+  a:link, a:visited
+    background-color: #f5f5f5
+    border: 1px solid #eee
+    +border-radius(3px)
+    color: #888
+    padding: 2px 5px
+    text-decoration: none
+
+  a:hover, a:active
+    background-color: #eee
+    color: #111
+    text-decoration: none
+
+tr:hover td
+  background-color: #fbfbfb
+
+// Alert Messages
+.alert-message
+  color: #fff
+  left: 0
+  padding: 1.25em 1.25em 1.25em 7.5em
+  position: absolute
+  right: 0
+  top: 0
+  z-index: 1
+  -webkit-animation: fadeout ease-out 1
+  -moz-animation: fadeout ease-out 1
+  -o-animation: fadeout ease-out 1
+  animation: fadeout ease-out 1
+  -webkit-animation-fill-mode: forwards
+  -moz-animation-fill-mode: forwards
+  -o-animation-fill-mode: forwards
+  animation-fill-mode: forwards
+
+  &.info
+    background-color: #090
+    border-left: 0.1875em solid #090
+
+  &.error
+    background-color: #d30000
+    border-left: 0.1875em solid #d30000
+
+.fadeout
+  -webkit-animation-duration: 1s
+  -moz-animation-duration: 1s
+  -o-animation-duration: 1s
+  animation-duration: 1s
+
+.fadeoutdelay
+  -webkit-animation-delay: 7s
+  -moz-animation-delay: 7s
+  -o-animation-delay: 7s
+  animation-delay: 7s
+
+@-webkit-keyframes fadeout
+  from
+    opacity: 1
+  to
+    opacity: 0
+@-moz-keyframes fadeout
+  from
+    opacity: 1
+  to
+    opacity: 0
+@-o-keyframes fadeout
+  from
+    opacity: 1
+  to
+    opacity: 0
+@keyframes fadeout
+  from
+    opacity: 1
+  to
+    opacity: 0
+
+
+// Redonkulous display targeting
+@media only screen and (min-width: 2560px)
+  body
+    font-size: 150%
+
+// Huge display targeting
+@media only screen and (max-width: 2560px) and (min-width: 1680px)
+  body
+    font-size: 130%
+
+// Standard display targeting
+@media only screen and (max-width: 1680px) and (min-width: 1279px)
+  body
+    font-size: 100%
+
+// Medium display targeting
+@media only screen and (max-width: 1279px) and (min-width: 768px)
+  body
+    font-size: 80%
+
+// Small display targeting
+@media only screen and (max-width: 767px)
+  body
+    font-size: 62.5%
+
+// Mobile display targeting
+@media only screen and (max-width: 640px)
+  body
+    font-size: 35%
+
+// Target IE10 Only
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none)
+  button.go
+    line-height: 1.3em

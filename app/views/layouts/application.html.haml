@@ -1,0 +1,115 @@
+!!!
+%html
+  %head
+    %title Reaper.io | Convert Outstanding Harvest Invoices To Quickbooks Compatible IIF Files.
+
+    - if Settings.uservoice_token
+      %meta{:name => "uservoiceToken", :content => Settings.uservoice_token}
+
+    - if Settings.google_analytics_id
+      %meta{:name => "googleAnalyticsId", :content => Settings.google_analytics_id}
+
+    %link{:href => "apple-icon-57x57.png", :rel => "apple-touch-icon", :sizes => "57x57"}/
+    %link{:href => "apple-icon-72x72.png", :rel => "apple-touch-icon", :sizes => "72x72"}/
+    %link{:href => "apple-icon-114x114.png", :rel => "apple-touch-icon", :sizes => "114x114"}/
+    %link{:href => "apple-icon-144x144.png", :rel => "apple-touch-icon", :sizes => "144x144"}/
+    = stylesheet_link_tag    "application", :media => "all"
+
+    :javascript
+      var Reaper = {};
+      Reaper.contentForMeta = function(name) {
+        var metas = document.getElementsByTagName('meta');
+
+        for(var i = 0; i < metas.length; i++) {
+          var meta = metas[i];
+
+          if(meta.name == name) {
+            return meta.content;
+          }
+        }
+
+        return null;
+      }
+
+    /[if IE]
+      = stylesheet_link_tag    "ie", :media => "all"
+
+    / Typekit - placed in head to prevent FOUT
+    - if Settings.typekit_url
+      = javascript_include_tag Settings.typekit_url
+      :javascript
+        try{Typekit.load();}catch(e){};
+
+    = csrf_meta_tags
+
+    / Google Analytics
+    :javascript
+      (function() {
+        var id = Reaper.contentForMeta('googleAnalyticsId');
+
+        if(!id) {
+          return;
+        }
+
+        var _gaq = _gaq || [];
+        _gaq.push(['_setAccount', id]);
+        _gaq.push(['_trackPageview']);
+
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+      })();
+  %body
+    - if flash[:notice]
+      .alert-message.fadeout.fadeoutdelay.info
+        %p= flash[:notice]
+    - if flash[:error]
+      .alert-message.error
+        %p= flash[:error]
+    .wrap
+      .block_decoration
+      %h1.logo
+        %a{:href => "/"}
+          <span class="logoword1">Reaper</span><em class="logoword2">.io</em>
+      %h2.subtitle
+        Convert <em>Outstanding Harvest Invoices</em> To <em>Quickbooks Compatible IIF</em> Files.
+      - if current_user
+        %h3.invoicetitle
+          Outstanding invoices for
+        = form_tag "/logout", :method => "post" do
+          %h4.currentuser
+            = current_user.email
+            %button.logout{:type => "submit", :onclick => "_gaq.push(['_trackEvent', 'Usage', 'Logout',]);"} Logout
+            %small
+              Harvest token expires in
+              = distance_of_time_in_words(Time.now, Time.at(current_user.token_expires_at.seconds))
+      = yield
+      %h6.created_by_cramerdev
+        %a{:href => "http://cramerdev.com", :target => "_blank"}
+          %span Another fine venture by the folks at Cramer Development
+      .tos_privacy
+        %a{:href => "/tos"} Terms of Service
+        %a{:href => "/privacy"} Privacy Policy
+
+    = javascript_include_tag "application"
+
+    / Lettering.js to Kern logotype - https://github.com/davatron5000/Lettering.js
+    :javascript
+      (function init() {
+        $('.logoword1, .logoword2').lettering();
+      })();
+
+    / User Voice
+    :javascript
+      var uvOptions = {};
+      (function() {
+        var token = Reaper.contentForMeta('uservoiceToken');
+
+        if(!token) {
+          return;
+        }
+
+        var uv = document.createElement('script'); uv.type = 'text/javascript'; uv.async = true;
+        uv.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'widget.uservoice.com/' + token + '.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(uv, s);
+      })();

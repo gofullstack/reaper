@@ -1,0 +1,8 @@
+google_analytics_id: <%= ENV['GOOGLE_ANALYTICS_ID'] %>
+harvest:
+  oauth_id: <%= ENV['HARVEST_OAUTH_ID'] %>
+  oauth_secret: <%= ENV['HARVEST_OAUTH_SECRET'] %>
+reaper:
+  secret_token: <%= ENV.fetch('SECRET_TOKEN', "CHANGEME:48e33063d190c582be9c074c80b37551cdccdcc50fd88323c4b26bab0fbe1ee09b4c5564dd7dbaee5f0f6c6146b5210691746cd9715bf6a16a356c282a091852") %>
+typekit_url: <%= ENV['TYPEKIT_URL'] %>
+uservoice_token: <%= ENV['USERVOICE_TOKEN'] %>
