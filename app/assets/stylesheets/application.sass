@@ -160,15 +160,24 @@ h4
   width: 15.3125em
 
   a
-    background: url(/images/logo_fullstack.svg) no-repeat
     +background-size(contain)
     display: block
     height: 2.8125em
     text-decoration: none
     width: 15.3125em
 
+    &:hover
+      color: #888
+
     span
-      display: none
+      float: left
+      display: block
+      font-size: .6em
+      width: 10em
+      line-height: 1.5em
+      margin-top: .8em
+      
+
 
 .tos_privacy
   +inline-block
