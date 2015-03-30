@@ -84,12 +84,13 @@
               Harvest token expires in
               = distance_of_time_in_words(Time.now, Time.at(current_user.token_expires_at.seconds))
       = yield
-      %h6.created_by_cramerdev
-        %a{:href => "http://cramerdev.com", :target => "_blank"}
-          %span Another fine venture by the folks at Cramer Development
+      %h6.created_by_fullstack
+        %a{:href => "http://gofullstack.com", :target => "_blank"}
+          %span Another fine open source venture by the folks at FullStack
       .tos_privacy
         %a{:href => "/tos"} Terms of Service
         %a{:href => "/privacy"} Privacy Policy
+        %a{:href => "http://github.com/gofullstack/reaper"} Source
 
     = javascript_include_tag "application"
 
