@@ -21,7 +21,7 @@ module Invoicing
     def synchronize!
       # Clean up any local invoices, dependent clients should be cleared
       # automagically.
-      user.outstanding_invoices.destroy_all
+      user.invoices.where(:state => :draft).delete_all
 
       weak_pull_invoices! && pull_clients!
 
